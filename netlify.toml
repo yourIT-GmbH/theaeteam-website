@@ -1,0 +1,698 @@
+# ============================================================
+# THE Ä-TEAM — netlify.toml
+# Optimiert nach yourIT Praxisleitfaden Website-Qualität 2026
+# ============================================================
+
+# ── Security-Header (Stufe 2 des Leitfadens) ──────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Verhindert Clickjacking
+    X-Frame-Options = "DENY"
+    # Verhindert MIME-Sniffing
+    X-Content-Type-Options = "nosniff"
+    # Kein Referrer bei Cross-Origin
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Gerätefunktionen einschränken
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    # CSP: kein unsafe-inline, nur eigene Domain + keine externen CDNs
+    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests; block-all-mixed-content"
+    # HSTS – HTTPS erzwingen (1 Jahr)
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-Permitted-Cross-Domain-Policies = "none"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+
+# ── Statische Assets langfristig cachen ───────────────────
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# ── Redirects ─────────────────────────────────────────────
+# Alle HTTP → HTTPS (Netlify macht das automatisch, aber explizit ist sicherer)
+
+# ===================================================================
+
+# ===================================================================
+# 301-Redirects von alten Blogger-URLs auf die neue Seitenstruktur
+# 92 Blogbeitraege -> sprechende URLs /blog/<slug>/
+# 14 statische Seiten (/p/slug.html) -> neue Verzeichnisse
+# ===================================================================
+
+# --- Statische Seiten (/p/...) ---
+[[redirects]]
+  from = "/p/appetite-for-impact.html"
+  to = "/the-umlauts/appetite-for-impact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p/umlauts-manifest.html"
+  to = "/the-umlauts/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p/theumlauts.html"
+  to = "/the-umlauts/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p/teilnahmebedingungen.html"
+  to = "/faq/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p/the-glossary.html"
+  to = "/glossar/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p/the-aessets.html"
+  to = "/the-aessets/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p/theaeteam.html"
+  to = "/ueber-uns/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p/theae.html"
+  to = "/das-ae/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p/domain-liste.html"
+  to = "/domaen-liste/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p/kontakt.html"
+  to = "/kontakt/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p/the-faq.html"
+  to = "/faq/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p/domainpacht.html"
+  to = "/domainpacht/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p/datenschutzerklarung.html"
+  to = "/datenschutz/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/p/impressum-datenschutz.html"
+  to = "/impressum/"
+  status = 301
+  force = true
+
+# --- Blogbeitraege (/YYYY/MM/...) -> sprechende URLs ---
+[[redirects]]
+  from = "/2026/06/umlaut-domain-und-e-mail-2026-was.html"
+  to = "/blog/umlaut-domain-und-e-mail-2026-was-wirklich-funktioniert/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2026/06/umlaut-domains-2026-warum-o-u-langst.html"
+  to = "/blog/umlaut-domains-2026-warum-ae-oe-ue-laengst-kein-risiko-mehr-sind/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2026/02/hinweis-keine-verbindung-zur-land.html"
+  to = "/blog/unabhaengigkeits-hinweis/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2025/12/the-taess-alle-tassen-im-schrank.html"
+  to = "/blog/the-taess-alle-tassen-im-schrank/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2025/10/4-jahre-land-ein-umlaut-schreibt.html"
+  to = "/blog/4-jahre-the-laend-ein-umlaut-schreibt-geschichte/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2025/10/mind-gap-von-volapuk-bis-a-team.html"
+  to = "/blog/mind-the-gaep-von-volapuek-bis-the-ae-team/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2025/06/megastand-der-mittelstand-braucht.html"
+  to = "/blog/megastaend-der-mittelstand-braucht-sichtbarkeit-mit-ae/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2025/05/chatcom-verkauft-155-mio-gelbes-t-shirt.html"
+  to = "/blog/chat-com-verkauft-15-5-mio-gelbes-t-shirt-breites-grinsen/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2025/04/die-geschichte-von-thelaendei-wie-aus.html"
+  to = "/blog/die-geschichte-von-thelaendei-wie-aus-einer-vergessenen-umlaut-domain/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2025/04/the-vegaen-saelaed-ae.html"
+  to = "/blog/the-vegaen-the-saelaed-the-ae/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2024/11/was-ist-dein-plan-b.html"
+  to = "/blog/was-ist-ihr-plaen-b/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2024/07/the-traner-so-sicherst-du-dir-dein-home.html"
+  to = "/blog/the-traener-so-sicherst-du-dir-dein-home-viewing-event-im-wert-von-5/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2024/01/aelblertag-so-sichern-sie-sich.html"
+  to = "/blog/aelblertag-so-sichern-sie-sich-freitickets-zur-cmt-2024-the-ae-team/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2023/09/finally-we-grabbed-doener.html"
+  to = "/blog/finaelly-we-graebbed-the-doener/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2023/09/domain-namen-als-brucke-zwischen-der.html"
+  to = "/blog/domain-namen-als-bruecke-zwischen-der-offline-und-online-welt/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2023/08/the-vaenity.html"
+  to = "/blog/the-vaenity/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2023/08/the-power-of-the.html"
+  to = "/blog/the-power-of-the-the/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2023/06/part-of-laend.html"
+  to = "/blog/yourit-ist-part-of-the-laend/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2023/05/perfect-match.html"
+  to = "/blog/perfect-maetch/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/11/black-friday-in-land.html"
+  to = "/blog/blaeck-friday/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/10/the-taex-steuern-gestalten.html"
+  to = "/blog/the-taex-steuern-gestalten/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/10/the-gaerage-meine-garage-meine-regeln.html"
+  to = "/blog/the-gaerage/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/10/keep-up-faecade.html"
+  to = "/blog/keep-up-the-faecade/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/08/the-satellite-laend-style.html"
+  to = "/blog/the-saetellite/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/08/the-podcaests-made-in-laend.html"
+  to = "/blog/the-podcaests/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/07/the-careers-find-your-next-job-in-laend.html"
+  to = "/blog/the-caereers-find-your-next-job-in-the-laend/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/07/the-carrera-made-in-land.html"
+  to = "/blog/the-caerrera-made-in-the-laend/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/07/the-oel-taste-laend.html"
+  to = "/blog/the-oel-taste-the-laend/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/05/what-haeck-auf-linkedin-als-unternehmen.html"
+  to = "/blog/what-the-haeck-auf-linkedin-als-unternehmen-kommentieren/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/04/the-faeshion-in-laend-style.html"
+  to = "/blog/the-faeshion/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/04/love-is-in-aer.html"
+  to = "/blog/love-is-in-the-aer/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/04/the-pan-in-land-style.html"
+  to = "/blog/the-paen/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/04/make-plaenet-great-again.html"
+  to = "/blog/make-the-plaenet-great-again/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/04/the-saelaed-laend-style.html"
+  to = "/blog/the-saelaed/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/04/the-aei-laend-style.html"
+  to = "/blog/the-aei/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/04/the-laend-leider-zu-spaet.html"
+  to = "/blog/the-laend-zu-spaet/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/04/the-haes-wunscht-frohe-ostern.html"
+  to = "/blog/the-haes-frohe-ostern/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/04/the-laendroid-land-style.html"
+  to = "/blog/the-laendroid/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/04/the-exaemple-laend-style.html"
+  to = "/blog/the-exaemple/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/03/the-raelly-laend-style-domain-package.html"
+  to = "/blog/the-raelly/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/03/the-snaeck-laend-style.html"
+  to = "/blog/the-snaeck/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/03/the-stand-ukraine.html"
+  to = "/blog/the-staend-ukraine/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/03/the-gallery-zu-spat.html"
+  to = "/blog/the-gaellery-zu-spaet/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/03/202203the-caere-4-ukraine.html.html"
+  to = "/blog/the-caere-4-ukraine/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/03/the-swabman-in-the-land-edition.html"
+  to = "/blog/the-swaebmaen-unverkaeuflich/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/02/the-patch-land-edition.html"
+  to = "/blog/the-paetch/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/auffallen-als-landei.html"
+  to = "/blog/auffallen-als-the-laendei/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-meta-land-edition.html"
+  to = "/blog/the-metae/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-cam-of-land.html"
+  to = "/blog/the-caem/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-gau-in-land.html"
+  to = "/blog/the-gaeu/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-eiland-zu-spat.html"
+  to = "/blog/the-eilaend-zu-spaet/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-castle-in-land.html"
+  to = "/blog/the-caestle/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-hack.html"
+  to = "/blog/the-haeck/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-landjager-zu-spat.html"
+  to = "/blog/the-laendjaeger-zu-spaet/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-hardware-of-theland.html"
+  to = "/blog/the-hardwaere/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-software-of-theland.html"
+  to = "/blog/the-softwaere/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-laser-of-land.html"
+  to = "/blog/the-laeser/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-maps.html"
+  to = "/blog/the-maeps/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-land-history.html"
+  to = "/blog/part-of-the-laend-history/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-a.html"
+  to = "/blog/the-ae/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-craft.html"
+  to = "/blog/the-craeft/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-admin.html"
+  to = "/blog/the-aedmin/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-tann-in-land.html"
+  to = "/blog/the-taenn/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-parl.html"
+  to = "/blog/the-paerl/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2022/01/the-hands.html"
+  to = "/blog/the-haends/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-chance.html"
+  to = "/blog/the-chaence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/httpsthe-ae-team.blogspot.com202112the-faens.html.html"
+  to = "/blog/the-faens/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-schnaps-leider-zu-spat.html"
+  to = "/blog/the-schnaeps-zu-spaet/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-care.html"
+  to = "/blog/the-caere/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-cat.html"
+  to = "/blog/the-caet/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-lamp.html"
+  to = "/blog/the-laemp/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-privacy-zu-spat.html"
+  to = "/blog/the-privaecy-zu-spaet/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/theater.html"
+  to = "/blog/theaeter/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/therapie.html"
+  to = "/blog/theraepie/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-gag.html"
+  to = "/blog/the-gaeg/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-brazel.html"
+  to = "/blog/the-braezel/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-bank-zu-spat.html"
+  to = "/blog/the-baenk-zu-spaet/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-add.html"
+  to = "/blog/the-aedd/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-back.html"
+  to = "/blog/the-baeck/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-asset.html"
+  to = "/blog/the-aesset/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-tast.html"
+  to = "/blog/the-taest/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-stak.html"
+  to = "/blog/the-staek/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-battery.html"
+  to = "/blog/the-baettery/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-bat.html"
+  to = "/blog/the-baet/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-backup.html"
+  to = "/blog/the-baeckup/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-hammer.html"
+  to = "/blog/the-haemmer/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-hacker-unser-doman-paket-fur-land.html"
+  to = "/blog/the-haecker/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-tank.html"
+  to = "/blog/the-taenk/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-hashtag.html"
+  to = "/blog/the-haeshtag/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-hashtag-of-land.html"
+  to = "/blog/the-haeshtaeg-in-the-laend/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-tag.html"
+  to = "/blog/the-taeg/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2021/12/the-acad-unser-doman-paket-fur-land.html"
+  to = "/blog/the-aecaed/"
+  status = 301
+  force = true
+
+
+# --- Protokoll-Weiterleitung (HTTP -> HTTPS), zuletzt ausgewertet ---
+[[redirects]]
+  from = "http://www.theaeteam.de/*"
+  to   = "https://www.theaeteam.de/:splat"
+  status = 301
+  force  = true
+

@@ -1,0 +1,17 @@
+# Python-Muell (z.B. vom fruehreren Generator-Skript)
+__pycache__/
+*.pyc
+*.pyo
+
+# Betriebssystem-Muell
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor-Hilfsdateien
+*.swp
+*.tmp
+*~
+
+# Lokale Node-Abhaengigkeiten (falls spaeter ein Build dazukommt)
+node_modules/

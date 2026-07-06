@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="THE Ä-TEAM verpachtet Umlaut-DOMÄN-PÄCKs (Ä, Ö, Ü) samt AE/OE/UE-Variante, für eine unverwechselbare, abgesicherte Markenadresse.">
+<link rel="canonical" href="https://www.theaeteam.de/">
+  <title>THE Ä-TEAM – Umlaut-DOMÄN-PÄCKs für Ihre Marke</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.theaeteam.de/">
+<meta property="og:title" content="THE Ä-TEAM – Umlaut-DOMÄN-PÄCKs für Ihre Marke">
+<meta property="og:description" content="THE Ä-TEAM verpachtet Umlaut-DOMÄN-PÄCKs (Ä, Ö, Ü) samt AE/OE/UE-Variante, für eine unverwechselbare, abgesicherte Markenadresse.">
+  <meta property="og:image" content="https://www.theaeteam.de/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.theaeteam.de/og-image.png">
+<link rel="preload" href="fonts/open-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{
+  --ink:#0E0E0C; --black:#000000; --grey:#333333;
+  --muted:#6B6B66; --line:#E4E4E2;
+  --red:#CC2C24; --blue:#00AEEF; --blue-ink:#0B7FA8; --green:#6CC24A; --magenta:#0B7FA8; --yellow:#FFFC03;
+  /* Pastelltöne sind echte Tints der Markenfarben, eine Familie */
+  --soft-yellow:#FEFDCC; --soft-blue:#CCEFFC; --soft-red:#F7D5D3; --soft-green:#E2F2D3;
+  --paper:#F2F2F0; --white:#FFFFFF; --card:#FFFFFF;
+  --disp:'Open Sans',system-ui,-apple-system,sans-serif;
+  --nav-h:66px;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:var(--disp);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1200px;margin:0 auto;padding:0 2rem;}
+/* NAV (dark band) */
+nav{position:sticky;top:0;z-index:100;background:var(--ink);height:var(--nav-h);display:flex;align-items:center;}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%;}
+.logo{font-family:var(--disp);font-weight:800;font-size:1.3rem;letter-spacing:-0.02em;color:#fff;}
+.logo .ae{color:var(--yellow);}
+.nav-links{display:flex;gap:0.15rem;list-style:none;margin:0;padding:0;flex-wrap:nowrap;}
+.nav-links a{font-size:0.8rem;font-weight:600;color:#D9D7D0;padding:0.4rem 0.6rem;border-radius:4px;transition:.15s;white-space:nowrap;}
+.nav-links a:hover{background:rgba(255,255,255.08);color:#fff;}
+.nav-links a.active{color:var(--blue);}
+.nav-links a.cta{background:var(--yellow);color:var(--ink)!important;font-weight:800;}
+.burger{display:none;background:none;border:0;flex-direction:column;gap:4px;cursor:pointer;}
+.burger span{width:22px;height:2px;background:#fff;display:block;}
+#mnav{display:none;background:var(--ink);padding:0.5rem 2rem 1.25rem;}
+#mnav a{display:block;color:#D9D7D0;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255.08);font-weight:600;}
+/* SECTIONS */
+section{padding:4.5rem 0;}
+.eyebrow{display:inline-block;font-size:0.72rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);}
+.num{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:var(--ink);color:#fff;font-family:var(--disp);font-weight:800;border-radius:4px;font-size:0.95rem;}
+h1{font-family:var(--disp);font-weight:800;letter-spacing:-0.03em;line-height:1.02;font-size:clamp(2.6rem,6vw,4.6rem);margin:.5rem 0;}
+h2{font-family:var(--disp);font-weight:800;letter-spacing:-0.02em;line-height:1.05;font-size:clamp(1.8rem,3.6vw,2.8rem);margin:.4rem 0 1rem;}
+h1 .hl{background:var(--blue);color:#fff;padding:0 .12em;}
+.lead{font-size:1.15rem;color:var(--grey);max-width:44ch;}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:800;font-size:0.95rem;padding:0.85rem 1.5rem;border-radius:6px;border:2px solid var(--ink);transition:.15s;cursor:pointer;}
+.btn-primary{background:var(--yellow);color:var(--ink);}
+.btn-primary:hover{background:var(--ink);color:var(--yellow);}
+.btn-ghost{background:transparent;color:var(--blue-ink);border-color:var(--blue-ink);}
+.btn-ghost:hover{background:var(--blue-ink);color:#fff;border-color:var(--blue-ink);}
+.row{display:flex;gap:1rem;flex-wrap:wrap;}
+/* HERO, dunkles Marken-Band (wie Infografik-Header) */
+.hero{background:var(--ink);color:#fff;padding:3.25rem 0 3.75rem;}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;}
+.hero h1{color:#fff;line-height:1.18;}
+.hero h1 .hl{background:none;color:var(--blue);padding:0;}
+.hero .lead{color:#C4C1B9;}
+.tagline{font-family:var(--disp);font-weight:800;font-size:1.02rem;line-height:1.4;letter-spacing:-.005em;color:#fff;margin:0 0 1.1rem;}
+.tagline .y{color:var(--blue);}
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;max-width:300px;margin-left:auto;}
+.mosaic div{aspect-ratio:1;border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:800;font-size:2.3rem;color:#fff;}
+.m-b{background:var(--blue);} .m-b2{background:#0B87B5;} .m-b3{background:#0A5E80;}
+.m-y{background:var(--yellow);color:var(--ink);} .m-d{background:#14333F;color:#fff;}
+.mosaic .m-y{color:var(--ink);}
+/* TRUST RINGS (Infografik-Sektion 2) */
+.rings-sec{background:var(--white);border-bottom:1px solid var(--line);}
+.rings{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+.ring{text-align:center;}
+.ring-c{width:132px;height:132px;border-radius:50%;margin:0 auto 1rem;display:grid;place-items:center;background:conic-gradient(var(--c) calc(var(--p)*1%), #E9E9E6 0);}
+.ring-in{width:96px;height:96px;border-radius:50%;background:#fff;display:grid;place-items:center;font-family:var(--disp);font-weight:800;font-size:1.6rem;color:var(--ink);}
+.ring b{display:block;font-family:var(--disp);font-weight:800;font-size:1.02rem;margin-bottom:.35rem;color:var(--ink);}
+.ring span{font-size:.84rem;color:var(--grey);line-height:1.55;display:block;max-width:15rem;margin:0 auto;}
+.ring-src{margin-top:1.75rem;font-size:.74rem;color:var(--muted);text-align:center;}
+@media(max-width:860px){ .rings{grid-template-columns:repeat(2,1fr);gap:2rem;} .mosaic{margin:0;max-width:240px;} }
+/* STATS */
+.stats{background:var(--ink);}
+.stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.stat{padding:1.5rem 0;text-align:center;}
+.stat b{display:block;font-family:var(--disp);font-weight:800;font-size:2.6rem;line-height:1;}
+.stat.y b{color:var(--yellow);} .stat.b b{color:var(--blue);} .stat.g b{color:var(--blue);}
+.stat span{font-size:0.82rem;color:#B7B4AC;letter-spacing:.04em;text-transform:uppercase;font-weight:700;}
+/* CARDS */
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:1.75rem;box-shadow:0 1px 0 rgba(0,0,0.03);}
+.icon{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
+.icon svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
+.icon.y svg{stroke:var(--ink);}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.feat h3{font-family:var(--disp);font-weight:800;font-size:1.05rem;margin:0 0 .4rem;letter-spacing:-0.01em;}
+.feat p{font-size:0.92rem;color:var(--grey);margin:0;line-height:1.6;}
+/* COMBO */
+.combo{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;}
+.chip{border-radius:12px;padding:1.5rem 1.75rem;font-family:var(--disp);font-weight:800;font-size:1.3rem;border:2px solid var(--ink);text-align:center;}
+.chip small{display:block;font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:.4rem;}
+.chip.y{background:#fff;} .chip.b{background:var(--soft-blue);}
+.chip.key{background:var(--yellow);border-color:var(--ink);}
+.op{font-family:var(--disp);font-weight:800;font-size:1.8rem;}
+.checks{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;gap:.6rem;}
+.checks li{display:flex;gap:.65rem;align-items:flex-start;font-size:0.98rem;color:var(--grey);}
+.checks svg{flex:none;width:22px;height:22px;margin-top:2px;}
+/* SEARCH */
+.search-wrap{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:1.75rem;}
+#hs{width:100%;padding:1.05rem 1.2rem;font-size:1.05rem;font-family:var(--disp);border:2px solid var(--ink);border-radius:8px;outline:none;}
+#hs:focus{border-color:var(--blue);}
+.chips-row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin-top:.9rem;}
+.pill{border:1.5px solid var(--line);background:#fff;border-radius:20px;padding:.35rem .8rem;font-size:.8rem;font-weight:700;color:var(--grey);cursor:pointer;font-family:var(--disp);}
+.pill:hover{border-color:var(--blue);color:var(--blue);}
+#hcount{margin-left:auto;font-size:.8rem;font-weight:800;color:#fff;background:var(--blue);padding:.35rem .7rem;border-radius:20px;}
+#hlist{margin-top:1.25rem;column-width:220px;column-gap:0;}
+#hlist a{display:block;font-family:ui-monospace,Menlo,monospace;font-size:.82rem;color:var(--grey);padding:.5rem .8rem;border-bottom:1px solid var(--line);border-right:1px solid var(--line);break-inside:avoid;transition:.12s;}
+#hlist a:hover{background:var(--blue);color:#fff;}
+.empty{display:none;margin-top:1.25rem;border:2px solid var(--ink);border-radius:12px;background:var(--soft-blue);padding:1.5rem;}
+/* blog */
+.blogc{display:block;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:1.5rem;transition:.15s;}
+.blogc:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0.08);}
+.blogc .date{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-ink);}
+.blogc h3{font-family:var(--disp);font-weight:800;font-size:1.15rem;line-height:1.2;margin:.5rem 0;letter-spacing:-0.01em;}
+.blogc p{font-size:.9rem;color:var(--grey);margin:0 0 .75rem;}
+.blogc .more{font-size:.82rem;font-weight:800;color:var(--blue-ink);text-transform:uppercase;letter-spacing:.05em;}
+/* CTA */
+.cta{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.cta .wrap{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+/* pilot ribbon */
+.ribbon{background:#0B7FA8;color:#fff;text-align:center;font-size:.8rem;font-weight:700;letter-spacing:.04em;padding:.5rem 1rem;}
+.ribbon a{color:#fff;text-decoration:underline;}
+/* FOOTER */
+footer{background:var(--ink);color:#D9D7D0;padding:3rem 0 2rem;}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem;}
+footer h4{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#8C8981;margin:0 0 .9rem;}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem;}
+footer a{font-size:.85rem;color:#C7C4BC;}
+footer a:hover{color:var(--blue);}
+.flogo{font-family:var(--disp);font-weight:800;font-size:1.2rem;color:#fff;}
+.flogo .ae{color:var(--yellow);}
+.fbot{border-top:1px solid rgba(255,255,255.1);margin-top:2rem;padding-top:1.25rem;font-size:.78rem;color:#8C8981;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.sources{font-size:.75rem;color:var(--muted);border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1.25rem;}
+@media(max-width:1024px){ .nav-links{display:none;} .burger{display:flex;} }
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;} .grid5{grid-template-columns:repeat(2,1fr);}
+  .grid3{grid-template-columns:1fr;} .stats .wrap{grid-template-columns:1fr;} .fgrid{grid-template-columns:1fr 1fr;}
+  .tiles{justify-content:flex-start;}
+}
+/* FAZIT, schwarze Statement-Box mit großem gelbem Ä (Infografik-Sektion 8) */
+.fazit{background:var(--ink);color:#fff;}
+.fazit-grid{display:grid;grid-template-columns:auto 1fr;gap:2.75rem;align-items:center;}
+.fazit-ae{font-family:var(--disp);font-weight:800;font-size:clamp(130px,17vw,240px);line-height:.78;color:var(--yellow);user-select:none;}
+.fazit h2{color:#fff;}
+.fazit p{color:#C4C1B9;max-width:54ch;}
+.fazit-eq{font-family:var(--disp);font-weight:800;font-size:1.18rem;color:#fff;margin-top:1.1rem;}
+.fazit-eq .y{color:var(--blue);}
+/* RISIKO vs VORTEIL (Infografik-Sektionen 3+4) */
+.rv-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.rv-col{border:1px solid var(--line);border-radius:12px;padding:1.75rem;background:#fff;}
+.rv-risk{border-top:5px solid var(--red);} .rv-adv{border-top:5px solid var(--green);}
+.rv-head{font-family:var(--disp);font-weight:800;font-size:1.15rem;margin-bottom:1.1rem;letter-spacing:-.01em;}
+.rv-risk .rv-head{color:var(--red);} .rv-adv .rv-head{color:#3F8E22;}
+.rv-col ul{list-style:none;margin:0;padding:0;display:grid;gap:.8rem;}
+.rv-col li{display:flex;gap:.65rem;font-size:.95rem;color:var(--grey);line-height:1.5;align-items:flex-start;}
+.rv-col li b{color:var(--ink);font-weight:700;}
+.rv-ic{flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.72rem;font-weight:800;margin-top:1px;}
+.rv-risk .rv-ic{background:var(--red);} .rv-adv .rv-ic{background:#4B9B2E;}
+@media(max-width:860px){ .fazit-grid{grid-template-columns:1fr;gap:1rem;} .fazit-ae{font-size:100px;} .rv-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#0E0E0C">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0E0E0C"/>
+    <rect x="470" y="250" width="260" height="300" rx="28" fill="#00AEEF"/>
+    <text x="600" y="510" font-family="'Open Sans',Arial,sans-serif" font-weight="800" font-size="300" fill="#FFFC03" text-anchor="middle">Ä</text>
+    <text x="600" y="640" font-family="'Open Sans',Arial,sans-serif" font-weight="800" font-size="52" letter-spacing="4" fill="#FFFFFF" text-anchor="middle">THE Ä-TEAM</text>
+  </svg>
+</template>
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="logo">THE <span class="ae">Ä</span>-TEAM</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Start</a></li>
+      <li><a href="ueber-uns/index.html">Über uns</a></li>
+      <li><a href="the-umlauts/index.html">THE UMLAUTS</a></li>
+      <li><a href="das-ae/index.html">THE Ä</a></li>
+      <li><a href="domaen-paecks/index.html">DOMÄN-PÄCKs</a></li>
+      <li><a href="domainpacht/index.html">Domainpacht</a></li>
+      <li><a href="domaen-liste/index.html">DOMÄN-Liste</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="faq/index.html">THE FÄQ</a></li>
+      <li><a href="glossar/index.html">Glossar</a></li>
+      <li><a href="kontakt/index.html" class="cta">Jetzt pachten</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div id="mnav">
+  <a href="index.html">Start</a>
+  <a href="ueber-uns/index.html">Über uns</a>
+  <a href="the-umlauts/index.html">THE UMLAUTS</a>
+  <a href="das-ae/index.html">THE Ä</a>
+  <a href="domaen-paecks/index.html">DOMÄN-PÄCKs</a>
+  <a href="domainpacht/index.html">Domainpacht</a>
+  <a href="the-aessets/index.html">THE ÄSSETS</a>
+  <a href="domaen-liste/index.html">DOMÄN-Liste</a>
+  <a href="blog/index.html">Blog</a>
+  <a href="faq/index.html">THE FÄQ</a>
+  <a href="glossar/index.html">Glossar</a>
+  <a href="kontakt/index.html">Jetzt pachten</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="tagline">Digitale Identität. Sprachlich verankert.<br>Sicher. Sichtbar. <span class="y">Einzigartig.</span></p>
+      <h1>Umlaut-Domains für <span class="hl">mehr digitale Identität.</span></h1>
+      <p class="lead">Informationssicherheit verstehen. Richtig nutzen. Mit Umlaut-DOMÄN-PÄCKs schreiben Sie Ihre Marke online richtig, Ä, Ö, Ü und die internationale AE/OE/UE-Variante.</p>
+      <div class="row" style="margin-top:1.75rem;">
+        <a href="domaen-paecks/index.html" class="btn btn-primary">DOMÄN-PÄCK entdecken</a>
+        <a href="domainpacht/index.html" class="btn btn-ghost" style="color:#fff;border-color:#fff;">Wie funktioniert's?</a>
+      </div>
+    </div>
+    <div class="mosaic" aria-hidden="true">
+      <div class="m-b">Ä</div><div class="m-b2">Ö</div><div class="m-b3">Ü</div>
+      <div class="m-d">Ö</div><div class="m-y">Ä</div><div class="m-d">Ü</div>
+      <div class="m-b3">Ä</div><div class="m-b">Ü</div><div class="m-b2">Ö</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" style="padding:0;">
+  <div class="wrap">
+    <div class="stat y"><b>641</b><span>DOMÄN-PÄCKs verfügbar</span></div>
+    <div class="stat g"><b>5,0 ★</b><span>ProvenExpert-Bewertung</span></div>
+    <div class="stat b"><b>2.322</b><span>Umlaut-DOMÄNs im Bestand</span></div>
+  </div>
+</section>
+
+
+<!-- VORTEILE (multicolor icons) -->
+<section style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="row" style="align-items:center;gap:1rem;margin-bottom:2rem;">
+      <span class="num">01</span>
+      <div><span class="eyebrow">Warum Umlaut-Domains</span><h2 style="margin:.2rem 0 0;">Die Vorteile auf einen Blick</h2></div>
+    </div>
+    <div class="grid5">
+      <div class="feat">
+        <div class="icon" style="background:var(--blue);"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7v1a7 7 0 0 0 4 9M12 6a3 3 0 0 1 3 3v3a5 5 0 0 1-1 6M9 10a3 3 0 0 1 6 0v3"/></svg></div>
+        <h3>Echte Identität</h3><p>Ihre Marke wird geschrieben, wie sie wirklich heißt.</p>
+      </div>
+      <div class="feat">
+        <div class="icon" style="background:var(--blue);"><svg viewBox="0 0 24 24"><path d="M9 3a3 3 0 0 0-3 3 3 3 0 0 0-1 5 3 3 0 0 0 1 5 3 3 0 0 0 3 3 3 3 0 0 0 3-1V4a3 3 0 0 0-3-1zM15 6a3 3 0 0 1 3 0 3 3 0 0 1 1 5 3 3 0 0 1-1 5"/></svg></div>
+        <h3>Bessere Merkbarkeit</h3><p>Bekannte Schreibweisen prägen sich leichter ein.</p>
+      </div>
+      <div class="feat">
+        <div class="icon" style="background:var(--blue);"><svg viewBox="0 0 24 24"><path d="M11 17l-3 3-5-5 4-4M13 7l3-3 5 5-4 4M8 12l4 4M12 8l4 4"/></svg></div>
+        <h3>Mehr Vertrauen</h3><p>Eine korrekte Schreibweise wirkt professionell und seriös.</p>
+      </div>
+      <div class="feat">
+        <div class="icon" style="background:var(--blue);"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h3>Regionale Verbundenheit</h3><p><a href="glossar/index.html" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Umlaute</a> sind Teil unserer Sprache und schaffen Nähe.</p>
+      </div>
+      <div class="feat">
+        <div class="icon" style="background:var(--blue);"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.5 6 .9-4.3 4.2 1 6L12 17l-5.4 2.6 1-6L3.3 9.4l6-.9z"/></svg></div>
+        <h3>Digitale Differenzierung</h3><p>Viele hochwertige Umlaut-Domains sind noch verfügbar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH / SHOP -->
+<section>
+  <div class="wrap">
+    <div class="row" style="align-items:center;gap:1rem;margin-bottom:1.25rem;">
+      <span class="num">02</span>
+      <div><span class="eyebrow">Domain-Suche</span><h2 style="margin:.2rem 0 0;">Finde deine Umlaut-DOMÄN</h2></div>
+    </div>
+    <div class="search-wrap">
+      <input id="hs" type="text" autocomplete="off" placeholder="Begriff suchen, z. B. BÄCKUP, HÄMMER, CHÄT, TÄG …" aria-label="Domain suchen">
+      <div class="chips-row">
+        <span style="font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">Beliebt:</span>
+        <button class="pill" data-q="BÄCKUP">BÄCKUP</button>
+        <button class="pill" data-q="HÄMMER">HÄMMER</button>
+        <button class="pill" data-q="CHÄT">CHÄT</button>
+        <button class="pill" data-q="TÄG">TÄG</button>
+        <span id="hcount"></span>
+      </div>
+      <p id="hhint" style="margin:1.25rem 0 0;color:var(--grey);font-size:.95rem;">Tippe einen Begriff, Umlaut- und AE/OE/UE-Schreibweise werden gemeinsam durchsucht. Jedes Ergebnis kannst du direkt anfragen.</p>
+      <div id="hlist"></div>
+      <div class="empty" id="hempty">
+        <strong style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);">Auf Anfrage</strong>
+        <p id="hempty-t" style="margin:.5rem 0 1rem;color:var(--ink);">Zu deiner Suche haben wir aktuell keine passende Domain im Bestand, viele sichern wir individuell auf Anfrage.</p>
+        <a href="kontakt/index.html" class="btn btn-primary" id="hempty-l">Individuell anfragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOMÄN-PÄCK KOMBINATION -->
+<section>
+  <div class="wrap">
+    <div class="row" style="align-items:center;gap:1rem;margin-bottom:2rem;">
+      <span class="num">03</span>
+      <div><span class="eyebrow">Das Prinzip</span><h2 style="margin:.2rem 0 0;">Das DOMÄN-PÄCK: die kluge Kombination</h2></div>
+    </div>
+    <div style="max-width:1000px;margin:0 auto;">
+      <p style="text-align:center;font-size:1rem;color:var(--grey);margin:0 0 1.75rem;max-width:640px;margin-left:auto;margin-right:auto;">Eine Umlaut-Domain und ihre internationale Schreibweise ergeben zusammen mehr als die Summe der Teile: ein vollständiges DOMÄN-PÄCK.</p>
+      <div class="combo" style="margin-bottom:2.5rem;">
+        <div class="chip y">müller.de<small>Echte Schreibweise</small></div>
+        <span class="op">+</span>
+        <div class="chip b">mueller.de<small>Internationale Variante (AE/OE/UE)</small></div>
+        <span style="display:inline-flex;align-items:center;gap:1.25rem;">
+          <span class="op">=</span>
+          <div class="chip key">DOMÄN-PÄCK<small>Ihre digitale Identität, vollständig</small></div>
+        </span>
+      </div>
+      <ul class="checks" style="display:grid;grid-template-columns:repeat(2,minmax(240px,1fr));gap:.7rem 2.5rem;max-width:820px;margin:0 auto;">
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#3F8E22"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Nutzer erreichen immer die richtige Website</li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#3F8E22"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Schutz Ihrer Marke vor Dritten</li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#3F8E22"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Keine Verwechslungen</li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#3F8E22"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>National &amp; international erreichbar</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- RISIKO vs VORTEIL -->
+<section style="background:var(--white);border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="row" style="align-items:center;gap:1rem;margin-bottom:2rem;">
+      <span class="num">04</span>
+      <div><span class="eyebrow">Risiko &amp; Chance</span><h2 style="margin:.2rem 0 0;">Ohne Schutz, oder mit DOMÄN-PÄCK</h2></div>
+    </div>
+    <div class="rv-grid">
+      <div class="rv-col rv-risk">
+        <div class="rv-head">Risiken bei Nicht-Nutzung</div>
+        <ul>
+          <li><span class="rv-ic">✕</span><span><b>Typosquatting.</b> Dritte registrieren Varianten und profitieren von Ihrem Namen.</span></li>
+          <li><span class="rv-ic">✕</span><span><b>Phishing &amp; Betrug.</b> Verwechslungsgefahr führt zu gefälschten Websites und Datenklau.</span></li>
+          <li><span class="rv-ic">✕</span><span><b>Markenverwässerung.</b> Uneinheitliche Schreibweisen schwächen Ihre Marke.</span></li>
+          <li><span class="rv-ic">✕</span><span><b>Vertrauensverlust.</b> Falsche Schreibweise wirkt unprofessionell.</span></li>
+          <li><span class="rv-ic">✕</span><span><b>Rechtliche Risiken.</b> Markenrechte können durch Dritte verletzt werden.</span></li>
+        </ul>
+      </div>
+      <div class="rv-col rv-adv">
+        <div class="rv-head">Vorteile der Nutzung</div>
+        <ul>
+          <li><span class="rv-ic">✓</span><span><b>Marken- &amp; Verbraucherschutz.</b> Ihre Marke in allen relevanten Schreibweisen.</span></li>
+          <li><span class="rv-ic">✓</span><span><b>Höhere Informationssicherheit.</b> Reduziert Angriffsflächen für Phishing.</span></li>
+          <li><span class="rv-ic">✓</span><span><b>Einheitliche Kommunikation.</b> Online wie offline konsistent.</span></li>
+          <li><span class="rv-ic">✓</span><span><b>Internationale Reichweite.</b> Umlaut + Transliteration = weltweit auffindbar.</span></li>
+          <li><span class="rv-ic">✓</span><span><b>Langfristige Wertsteigerung.</b> Einprägsame Domains steigern den Markenwert.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section style="background:var(--white);border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="row" style="align-items:center;gap:1rem;margin-bottom:2rem;">
+      <span class="num">05</span>
+      <div><span class="eyebrow">Blog &amp; Aktuelles</span><h2 style="margin:.2rem 0 0;">Aktuelles &amp; Geschichten</h2></div>
+    </div>
+    <div class="grid3">
+      <a class="blogc" href="blog/post.html?id=2">
+        <div class="date">2. Juni 2026</div>
+        <h3>Umlaut-Domains 2026: Warum Ä, Ö, Ü längst kein Risiko mehr sind</h3>
+        <p>Wir räumen mit veralteten Mythen auf, und zeigen, warum das echte Risiko die Lücke zwischen den Schreibweisen ist.</p>
+        <span class="more">Weiterlesen →</span>
+      </a>
+      <a class="blogc" href="blog/post.html?id=6">
+        <div class="date">16. Oktober 2025</div>
+        <h3>Mind THE GÄP – Von Volapük bis THE Ä-TEAM</h3>
+        <p>Eine Plansprache aus dem 19. Jahrhundert und ein modernes Digitalprojekt, erstaunliche Parallelen.</p>
+        <span class="more">Weiterlesen →</span>
+      </a>
+      <a class="blogc" href="blog/post.html?id=5">
+        <div class="date">31. Oktober 2025</div>
+        <h3>4 Jahre Landeskampagne – ein Umlaut schreibt Geschichte</h3>
+        <p>Vier Jahre, in denen ein einzelner Umlaut Markengeschichte geschrieben hat.</p>
+        <span class="more">Weiterlesen →</span>
+      </a>
+    </div>
+    <div style="margin-top:2rem;"><a href="blog/index.html" class="btn btn-ghost">Alle Beiträge</a></div>
+  </div>
+</section>
+
+<!-- FAZIT / CTA -->
+<section class="fazit">
+  <div class="wrap fazit-grid">
+    <div class="fazit-ae" aria-hidden="true">Ä</div>
+    <div>
+      <span class="eyebrow" style="color:var(--blue);">Fazit</span>
+      <h2 style="margin:.2rem 0 .9rem;">Sichern Sie Ihre digitale Identität, jetzt.</h2>
+      <p>Umlaut-Domains sind ein strategisches Muss für jede Marke, die im deutschsprachigen Raum erfolgreich, sicher und glaubwürdig agieren will. Sie schützen Ihre Identität, stärken Vertrauen und sichern einen entscheidenden Vorsprung im digitalen Raum.</p>
+      <p class="fazit-eq">Beides. Immer. Überall. <span class="y">Umlaut + Transliteration = Digitale Souveränität.</span></p>
+      <div class="row" style="margin-top:1.5rem;">
+        <a href="kontakt/index.html" class="btn btn-primary">Anfrage stellen</a>
+        <a href="faq/index.html" class="btn btn-ghost" style="color:#fff;border-color:#fff;">Fragen? THE FÄQ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="flogo">THE <span class="ae">Ä</span>-TEAM</div>
+        <p style="font-size:.85rem;color:#8C8981;line-height:1.6;margin:.75rem 0 0;">Umlaut-DOMÄN-PÄCKs zur Pacht.<br>Holzwiesenstraße 47 · 72181 Starzach · seit 2021<br>seit 2021 · Made in Baden-Württemberg</p>
+      </div>
+      <div><p class="footer-h">Seiten</p><ul>
+        <li><a href="ueber-uns/index.html">Über uns</a></li>
+        <li><a href="the-umlauts/index.html">THE UMLAUTS</a></li>
+        <li><a href="domaen-paecks/index.html">DOMÄN-PÄCKs</a></li>
+        <li><a href="domainpacht/index.html">Domainpacht</a></li>
+        <li><a href="glossar/index.html">Glossar</a></li>
+      </ul></div>
+      <div><h4>Mehr</h4><ul>
+        <li><a href="the-aessets/index.html">THE ÄSSETS</a></li>
+        <li><a href="domaen-liste/index.html">DOMÄN-Liste</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="faq/index.html">THE FÄQ</a></li>
+        <li><a href="social/index.html">Social</a></li>
+      </ul></div>
+      <div><p class="footer-h">Kontakt &amp; Recht</p><ul>
+        <li><a href="mailto:kontakt@theae.de">kontakt@theae.de</a></li>
+        <li><a href="tel:+491709687481">+49 170 9687481</a></li>
+        <li><a href="impressum/index.html">Impressum</a></li>
+        <li><a href="datenschutz/index.html">Datenschutz</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 THE Ä-TEAM · Thomas Ströbele · Starzach</span>
+      <span>THE Ä-TEAM steht in keiner Verbindung zur offiziellen THE-LÄND-Kampagne.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="domaen-liste/domains.js"></script>
+<script src="home.js"></script>
+</body>
+</html>

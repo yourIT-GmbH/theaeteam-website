@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# KI-Crawler explizit erlauben (GEO – Leitfaden Abschnitt 2.2)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+Sitemap: https://www.theaeteam.de/sitemap.xml
