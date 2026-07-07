@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLOSSÄRY | THE Ä-TEAM</title>
-<meta name="description" content="GLOSSÄRY: die wichtigsten Begriffe rund um Umlaut-Domains, Domain-Hygiene, Informationssicherheit und Branding, kurz erklärt und verlinkt.">
-<link rel="canonical" href="https://theaeteam.de/glossar/">
-<script type="application/ld+json">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GLOSSÄRY: die wichtigsten Begriffe rund um Umlaut-Domains, Domain-Hygiene, Informationssicherheit und Branding, kurz erklärt und verlinkt.">
+  <meta property="og:type" content="website"><meta property="og:url" content="https://www.theaeteam.de/glossar/">
+  <meta property="og:title" content="GLOSSÄRY | THE Ä-TEAM"><meta property="og:description" content="Die wichtigsten Begriffe rund um Umlaut-Domains, Domain-Hygiene, Informationssicherheit und Branding.">
+  <meta property="og:image" content="https://www.theaeteam.de/og-image.png">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://www.theaeteam.de/og-image.png">
+  <link rel="canonical" href="https://www.theaeteam.de/glossar/">
+  <link rel="preload" href="../fonts/open-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../fonts.css"><link rel="stylesheet" href="../style.css">
+  <title>GLOSSÄRY | THE Ä-TEAM</title>
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
@@ -403,48 +409,69 @@
     }
   ]
 }
-</script>
-<style>
-  :root {
-    --bg:#0C0C0A; --text:#F3F1EB; --blue:#00AEEF; --yellow:#FFFC03;
-    --green:#6CC24A; --card:#141412; --line:#F3F1EB;
-  }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--text);
-    font-family:"Open Sans","Segoe UI",system-ui,sans-serif; line-height:1.55; }
-  .gl-wrap { max-width:1080px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
-  .gl-kicker { color:var(--blue); font-weight:800; letter-spacing:.08em; text-transform:uppercase; font-size:.85rem; margin:0 0 .4rem; }
-  h1.gl-title { font-weight:800; font-size:clamp(2.2rem,6vw,3.4rem); margin:0 0 .6rem; letter-spacing:-.01em; }
-  h1.gl-title .ae { color:var(--yellow); }
-  .gl-intro { max-width:60ch; opacity:.92; margin:0 0 1.8rem; }
-  .gl-nav { display:flex; flex-wrap:wrap; gap:.4rem; padding:.9rem; margin:0 0 .8rem;
-    border:2px solid var(--line); box-shadow:4px 4px 0 var(--blue); background:var(--card); }
-  .gl-nav-item { display:inline-flex; align-items:center; justify-content:center;
-    min-width:2.1rem; height:2.1rem; padding:0 .35rem; font-weight:800; font-size:.95rem;
-    text-decoration:none; color:var(--text); border:2px solid transparent; }
-  a.gl-nav-item:hover, a.gl-nav-item:focus { color:var(--blue); border-color:var(--blue); outline:none; }
-  .gl-nav-off { opacity:.28; cursor:default; }
-  .gl-count { font-size:.9rem; opacity:.7; margin:0 0 2.4rem; }
-  .gl-group { scroll-margin-top:1.2rem; margin:0 0 2.6rem; }
-  .gl-group-letter { font-weight:800; font-size:2rem; color:var(--yellow);
-    border-bottom:2px solid var(--line); padding-bottom:.2rem; margin:0 0 1rem; }
-  .gl-term-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; }
-  .gl-term { background:var(--card); border:2px solid var(--line); box-shadow:4px 4px 0 rgba(243,241,235,.15);
-    padding:1rem 1.1rem 1.1rem; }
-  .gl-term-title { font-weight:800; font-size:1.05rem; margin:0 0 .4rem; }
-  .gl-alt { display:block; font-weight:400; font-size:.8rem; opacity:.65; margin-top:.15rem; }
-  .gl-term-def { margin:0 0 .7rem; font-size:.94rem; }
-  .gl-more { color:var(--blue); font-weight:700; text-decoration:none; font-size:.9rem; }
-  .gl-more:hover { text-decoration:underline; }
-  .gl-note { margin-top:2.5rem; padding:1rem 1.1rem; border-left:4px solid var(--blue);
-    background:var(--card); font-size:.9rem; opacity:.9; }
+  </script>
+  <style>
+/* GLOSSAERY-spezifisches Layout, nutzt die globalen Design-Tokens der Website */
+.gl-wrap { max-width:1080px; margin:0 auto; padding:2rem 1.25rem 4rem; }
+.gl-nav { display:flex; flex-wrap:wrap; gap:.4rem; padding:.9rem; margin:0 0 .8rem;
+  border:2px solid var(--border); box-shadow:4px 4px 0 var(--blue,#00AEEF); background:var(--surface,#141412); }
+.gl-nav-item { display:inline-flex; align-items:center; justify-content:center;
+  min-width:2.1rem; height:2.1rem; padding:0 .35rem; font-weight:800; font-size:.95rem;
+  text-decoration:none; color:var(--text); border:2px solid transparent; font-family:var(--display,inherit); }
+a.gl-nav-item:hover, a.gl-nav-item:focus { color:var(--blue,#00AEEF); border-color:var(--blue,#00AEEF); outline:none; }
+.gl-nav-off { opacity:.28; cursor:default; }
+.gl-count { font-size:.9rem; color:var(--text2,#C7C4BC); margin:0 0 2.4rem; }
+.gl-group { scroll-margin-top:1.2rem; margin:0 0 2.6rem; }
+.gl-group-letter { font-weight:800; font-size:2rem; color:var(--yellow); font-family:var(--display,inherit);
+  border-bottom:2px solid var(--border); padding-bottom:.2rem; margin:0 0 1rem; }
+.gl-term-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; }
+.gl-term { background:var(--surface,#141412); border:2px solid var(--border); box-shadow:4px 4px 0 rgba(243,241,235,.12);
+  padding:1rem 1.1rem 1.1rem; }
+.gl-term-title { font-weight:800; font-size:1.05rem; margin:0 0 .4rem; font-family:var(--display,inherit); }
+.gl-alt { display:block; font-weight:400; font-size:.8rem; color:var(--text2,#C7C4BC); margin-top:.15rem; }
+.gl-term-def { margin:0 0 .7rem; font-size:.94rem; color:var(--text); }
+.gl-more { color:var(--blue,#00AEEF); font-weight:700; text-decoration:none; font-size:.9rem; }
+.gl-more:hover { text-decoration:underline; }
+.gl-note { margin-top:2.5rem; padding:1rem 1.1rem; border-left:4px solid var(--blue,#00AEEF);
+  background:var(--surface,#141412); font-size:.9rem; color:var(--text2,#C7C4BC); }
 </style>
 </head>
 <body>
-  <main class="gl-wrap">
-    <p class="gl-kicker">Nachschlagen</p>
-    <h1 class="gl-title">GLOSS<span class="ae">Ä</span>RY</h1>
-    <p class="gl-intro">Die wichtigsten Begriffe rund um Umlaut-Domains, Domain-Hygiene, Informationssicherheit und Branding: kurz erklärt und direkt zu den passenden Seiten verlinkt.</p>
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+<nav id="nav" role="navigation" aria-label="Hauptnavigation"><a class='nav-logo' href='/'>THE <span class="ae">Ä</span>-TEAM</a><ul class="nav-links">
+    <li><a href='/'>Start</a></li>
+    <li><a href='/ueber-uns/'>Über uns</a></li>
+    <li><a href='/the-umlauts/'>THE UMLAUTS</a></li>
+    <li><a href='/das-ae/'>THE Ä</a></li>
+    <li><a href='/domaen-paecks/'>DOMÄN-PÄCKs</a></li>
+    <li><a href='/domainpacht/'>Domainpacht</a></li>
+    <li><a href='/the-aessets/'>THE ÄSSETS</a></li>
+    <li><a href='/domaen-liste/'>DOMÄN-Liste</a></li>
+    <li><a href='/blog/'>Blog</a></li>
+    <li><a href='/faq/'>THE FÄQ</a></li>
+    <li><a class='active' href='/glossar/'>Glossar</a></li>
+    <li><a href='/social/'>Social</a></li><li><a class='nav-cta' href='/kontakt/'>Jetzt pachten</a></li></ul><button class="burger" id="burger" aria-expanded="false" aria-label="Menü öffnen" aria-controls="mobile-menu"><span></span><span></span><span></span></button></nav>
+<div id="mobile-menu">
+  <a href='/'>Start</a>
+  <a href='/ueber-uns/'>Über uns</a>
+  <a href='/the-umlauts/'>THE UMLAUTS</a>
+  <a href='/das-ae/'>THE Ä</a>
+  <a href='/domaen-paecks/'>DOMÄN-PÄCKs</a>
+  <a href='/domainpacht/'>Domainpacht</a>
+  <a href='/the-aessets/'>THE ÄSSETS</a>
+  <a href='/domaen-liste/'>DOMÄN-Liste</a>
+  <a href='/blog/'>Blog</a>
+  <a href='/faq/'>THE FÄQ</a>
+  <a href='/glossar/'>Glossar</a>
+  <a href='/social/'>Social</a><a class='mm-cta' href='/kontakt/'>Jetzt pachten</a></div>
+<main id="main-content">
+<header class="page-hero">
+  <div class="label">Nachschlagen</div>
+  <h1 class="page-title">GLOSS<span class="ae">Ä</span>RY</h1>
+  <p class="page-sub">Die wichtigsten Begriffe rund um Umlaut-Domains, Domain-Hygiene, Informationssicherheit und Branding: kurz erklärt und direkt zu den passenden Seiten verlinkt.</p>
+</header>
+<section class="section">
+  <div class="gl-wrap">
     <nav class="gl-nav" aria-label="Alphabet-Navigation">
       <a class="gl-nav-item" href="#g-Num">#</a>
       <a class="gl-nav-item" href="#g-A">A</a>
@@ -944,6 +971,9 @@
       </div>
     </section>
     <p class="gl-note">THE Ä-TEAM hat keine organisatorische oder inhaltliche Verbindung zur offiziellen THE LÄND-Kampagne des Landes Baden-Württemberg. THE LÄND wird hier ausschließlich als positives Marketingbeispiel genannt.</p>
-  </main>
-</body>
-</html>
+  </div>
+</section>
+</main>
+<aside class="hinweis-bar"><span class="hinweis-label" aria-hidden="true">Hinweis</span><p class="hinweis-text">THE Ä-TEAM hat keine organisatorische oder inhaltliche Verbindung zur offiziellen THE LÄND-Kampagne. Wir sind ein unabhängiges Projekt.</p></aside><footer role="contentinfo"><div class="footer-top"><div><div class="footer-logo">THE <span class="ae">Ä</span>-TEAM</div><p class="footer-tagline">Holzwiesenstraße 47 · 72181 Starzach · seit 2021</p></div><nav class="footer-col"><p class="footer-h">Seiten</p><ul><li><a href='/ueber-uns/'>Über uns</a></li><li><a href='/the-umlauts/'>THE UMLAUTS</a></li><li><a href='/domaen-paecks/'>DOMÄN-PÄCKs</a></li><li><a href='/domainpacht/'>Domainpacht</a></li><li><a href='/domaen-liste/'>DOMÄN-Liste</a></li><li><a href='/blog/'>Blog</a></li><li><a href='/faq/'>THE FÄQ</a></li></ul></nav><nav class="footer-col"><p class="footer-h">Social</p><ul><li><a href="https://www.instagram.com/the_aeteam/" target="_blank" rel="noopener noreferrer">Instagram @the_aeteam</a></li><li><a href="https://www.facebook.com/theaeteam" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://www.linkedin.com/company/the-%C3%A4-team" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://twitter.com/THE_AETEAM" target="_blank" rel="noopener noreferrer">Twitter / X</a></li></ul></nav><nav class="footer-col"><p class="footer-h">Kontakt &amp; Recht</p><ul><li><a href="mailto:kontakt@theae.de">kontakt@theae.de</a></li><li><a href="tel:+491709687481">+49 170 9687481</a></li><li><a href='/kontakt/'>Kontaktformular</a></li><li><a href='/impressum/'>Impressum</a></li><li><a href='/datenschutz/'>Datenschutz</a></li></ul></nav></div><div class="footer-bottom"><p class="footer-copy">© 2026 THE Ä-TEAM · Thomas Ströbele · Starzach</p><nav class="footer-legal"><a href='/impressum/'>Impressum</a><a href='/datenschutz/'>Datenschutz</a></nav></div></footer>
+<script src="../main.js"></script>
+</body></html>
