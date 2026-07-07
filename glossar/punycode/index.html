@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punycode (xn--) einfach erklärt | GLOSSÄRY | THE Ä-TEAM</title>
+<meta name="description" content="Punycode ist die ASCII-Kodierung, mit der Umlaut-Domains im DNS abgebildet werden, z. B. müller.de als xn--mller-kva.de. Kurz und verständlich erklärt.">
+<link rel="canonical" href="https://theaeteam.de/glossar/punycode/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "@id": "https://theaeteam.de/glossar/punycode/#term",
+  "name": "Punycode (xn--)",
+  "alternateName": "xn--",
+  "description": "ASCII-Kodierung eines internationalisierten Domainnamens (IDN) für das DNS, mit der Umlaut-Domains technisch abgebildet werden, z. B. müller.de als xn--mller-kva.de.",
+  "url": "https://theaeteam.de/glossar/punycode/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "@id": "https://theaeteam.de/glossar/#glossary",
+    "name": "GLOSSÄRY",
+    "url": "https://theaeteam.de/glossar/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://theaeteam.de/" },
+    { "@type": "ListItem", "position": 2, "name": "GLOSSÄRY", "item": "https://theaeteam.de/glossar/" },
+    { "@type": "ListItem", "position": 3, "name": "Punycode (xn--)", "item": "https://theaeteam.de/glossar/punycode/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ist eine Punycode-Domain schlechter für Google?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Google indexiert Umlaut-Domains normal und zeigt Nutzern die lesbare Umlaut-Form an. Der Punycode ist nur die technische Schreibweise im Hintergrund und bringt keinen Ranking-Nachteil."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --bg:#0C0C0A; --text:#F3F1EB; --blue:#00AEEF; --yellow:#FFFC03;
+    --green:#6CC24A; --card:#141412; --line:#F3F1EB;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+    font-family:"Open Sans","Segoe UI",system-ui,sans-serif; line-height:1.6; }
+  .pg { max-width:760px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+  .crumbs { font-size:.85rem; opacity:.75; margin:0 0 1.6rem; }
+  .crumbs a { color:var(--blue); text-decoration:none; }
+  .crumbs a:hover { text-decoration:underline; }
+  .kicker { color:var(--blue); font-weight:800; letter-spacing:.08em; text-transform:uppercase; font-size:.8rem; margin:0 0 .4rem; }
+  h1 { font-weight:800; font-size:clamp(1.9rem,5vw,2.8rem); margin:0 0 1.2rem; letter-spacing:-.01em; }
+  h1 .ae { color:var(--yellow); }
+  .answer { background:var(--card); border:2px solid var(--line); box-shadow:4px 4px 0 var(--blue);
+    padding:1.1rem 1.2rem; font-weight:700; font-size:1.08rem; margin:0 0 1.8rem; }
+  h2 { font-weight:800; font-size:1.25rem; margin:2rem 0 .7rem; }
+  p { margin:0 0 1rem; }
+  .example { background:var(--card); border-left:4px solid var(--yellow); padding:.9rem 1.1rem; margin:1.2rem 0; }
+  .example code { color:var(--yellow); font-weight:700; }
+  .rel { margin:1rem 0 0; padding:0; list-style:none; }
+  .rel li { margin:.35rem 0; }
+  .rel a { color:var(--blue); font-weight:700; text-decoration:none; }
+  .rel a:hover { text-decoration:underline; }
+  .faq { margin-top:2rem; }
+  .faq-q { font-weight:800; margin:0 0 .3rem; }
+  .back { display:inline-block; margin-top:2.5rem; color:var(--blue); font-weight:800; text-decoration:none;
+    border:2px solid var(--blue); box-shadow:4px 4px 0 rgba(0,174,239,.35); padding:.6rem 1rem; }
+  .back:hover { background:var(--blue); color:var(--bg); }
+</style>
+</head>
+<body>
+  <main class="pg">
+    <nav class="crumbs" aria-label="Brotkrumen">
+      <a href="https://theaeteam.de/">Start</a> ›
+      <a href="https://theaeteam.de/glossar/">GLOSSÄRY</a> ›
+      Punycode (xn--)
+    </nav>
+
+    <p class="kicker">GLOSSÄRY-Begriff</p>
+    <h1>Punycode <span class="ae">(xn--)</span></h1>
+
+    <p class="answer">Punycode ist die ASCII-Kodierung, mit der eine Umlaut-Domain technisch im DNS abgebildet wird. Aus müller.de wird im Hintergrund xn--mller-kva.de.</p>
+
+    <h2>Was Punycode macht</h2>
+    <p>Das Domain Name System kennt von Haus aus nur die Zeichen a bis z, Ziffern und den Bindestrich. Umlaute wie ä, ö, ü gehören nicht dazu. Damit eine Umlaut-Domain trotzdem funktioniert, wird sie in eine reine ASCII-Zeichenkette übersetzt. Diese Übersetzung heißt Punycode und beginnt immer mit dem Präfix xn--.</p>
+    <p>Für Nutzerinnen und Nutzer bleibt das unsichtbar: Im Browser und in der Adresszeile erscheint weiterhin die lesbare Umlaut-Form. Nur die Technik dahinter arbeitet mit der kodierten Fassung.</p>
+
+    <div class="example">
+      <p style="margin:0"><strong>Beispiel:</strong> <code>müller.de</code> wird technisch zu <code>xn--mller-kva.de</code>. Beide bezeichnen dieselbe Domain, die eine ist die lesbare, die andere die kodierte Schreibweise.</p>
+    </div>
+
+    <h2>Warum das für Domain-Hygiene zählt</h2>
+    <p>Wer eine Umlaut-Domain absichert, sollte wissen, dass Umlaut-Form und ASCII-Transliteration zwei verschiedene Domains sind. müller.de (technisch xn--mller-kva.de) und mueller.de existieren unabhängig voneinander. Bleibt eine der beiden Schreibweisen offen, entsteht genau die Lücke, die für Typosquatting oder Phishing genutzt werden kann.</p>
+
+    <h2>Häufige Frage</h2>
+    <div class="faq">
+      <p class="faq-q">Ist eine Punycode-Domain schlechter für Google?</p>
+      <p>Nein. Google indexiert Umlaut-Domains normal und zeigt die lesbare Umlaut-Form an. Der Punycode ist nur die technische Schreibweise im Hintergrund und bringt keinen Ranking-Nachteil.</p>
+    </div>
+
+    <h2>Verwandte Begriffe</h2>
+    <ul class="rel">
+      <li><a href="https://theaeteam.de/glossar/#g-I">IDN (Internationalized Domain Name)</a></li>
+      <li><a href="https://theaeteam.de/glossar/#g-T">Transliteration</a></li>
+      <li><a href="https://theaeteam.de/glossar/#g-T">Typosquatting / Die Lücke</a></li>
+      <li><a href="https://theaeteam.de/the-umlauts/">THE UMLAUTS: das Fundament</a></li>
+    </ul>
+
+    <a class="back" href="https://theaeteam.de/glossar/#g-P">← Zurück zum GLOSSÄRY (P)</a>
+  </main>
+</body>
+</html>
